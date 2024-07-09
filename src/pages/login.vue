@@ -21,7 +21,6 @@ const personDetail = await new Promise((resolve)=>{
     })
   },3000)
 })
-console.log('node loaded')
 
 
 </script>

@@ -11,7 +11,7 @@ const nodeDetail = await new Promise((resolve)=>{
     })
   },100)
 })
-console.log('node loaded')
+//console.log('node loaded')
 
 </script>
 

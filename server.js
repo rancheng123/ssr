@@ -63,7 +63,7 @@ app.use('*', async (req, res) => {
     var endTime = Date.now()
     var rangeTime = endTime - startTime
     console.log('相应时间:  ' + (rangeTime / 1000))
-    console.log(html)
+    //console.log(html)
 
 
     res.status(200).set({ 'Content-Type': 'text/html' }).send(html)

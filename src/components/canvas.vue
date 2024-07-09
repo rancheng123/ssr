@@ -5,10 +5,6 @@ const router = useRouter()
 
 const nodes = await new Promise((resolve)=>{
   setTimeout(()=>{
-
-
-
-
     resolve((()=>{
       var arr = []
       for(var i=0;i<1000;i++){
