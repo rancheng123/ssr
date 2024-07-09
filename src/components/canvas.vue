@@ -1,5 +1,5 @@
 <script setup>
-import node from './node.vue'
+import canvasNode from './node.vue'
 import {  useRouter } from 'vue-router'
 const router = useRouter()
 
@@ -23,7 +23,7 @@ const nodes = await new Promise((resolve)=>{
 
 <template>
   <div>
-    <node
+    <canvasNode
         v-for="(node, nodeIndex) in nodes"
         :key="nodeIndex"
         :name="node.name" />
