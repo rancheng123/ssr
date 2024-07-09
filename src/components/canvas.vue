@@ -5,17 +5,21 @@ const router = useRouter()
 
 const nodes = await new Promise((resolve)=>{
   setTimeout(()=>{
-    resolve([
-      {
-        name: 'node1'
-      },
-      {
-        name: 'node2'
-      },
-      {
-        name: 'node3'
+
+
+
+
+    resolve((()=>{
+      var arr = []
+      for(var i=0;i<1000;i++){
+        arr.push({
+          name: 'node' + (i+1)
+        })
       }
-    ])
+
+
+      return arr
+    })())
   },3000)
 })
 

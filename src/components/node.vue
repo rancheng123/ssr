@@ -9,7 +9,7 @@ const nodeDetail = await new Promise((resolve)=>{
     resolve({
       users: ['rancheng']
     })
-  },3000)
+  },100)
 })
 console.log('node loaded')
 

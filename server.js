@@ -37,6 +37,7 @@ if (!isProduction) {
 // Serve HTML
 app.use('*', async (req, res) => {
   console.log('--------enter--------')
+  var startTime = Date.now()
   try {
     const url = req.originalUrl.replace(base, '')
 
@@ -58,7 +59,13 @@ app.use('*', async (req, res) => {
       .replace(`<!--app-head-->`, rendered.head ?? '')
       .replace(`<!--app-html-->`, rendered.html ?? '')
 
+
+    var endTime = Date.now()
+    var rangeTime = endTime - startTime
+    console.log('相应时间:  ' + (rangeTime / 1000))
     console.log(html)
+
+
     res.status(200).set({ 'Content-Type': 'text/html' }).send(html)
   } catch (e) {
     vite?.ssrFixStacktrace(e)
