@@ -13,8 +13,18 @@ export async function render(url) {
 
   const ctx = {}
   const html = await renderToString(app, ctx)
+  return {
+    html,
+    head: (()=>{
+      var match = router.options.routes.find((route)=>{
+        return route.path.replace('/','') === url
+      })
 
-  console.log(ctx)
-
-  return { html }
+      return `
+        <title>${match.meta.title}</title>
+        <meta name="keywords" content="${match.meta.keywords}" />
+        <meta name="description" content="${match.meta.description}" />
+      `
+    })()
+  }
 }

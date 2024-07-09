@@ -5,6 +5,8 @@ const routes = [
     ...(()=>{
         var index = {
             path: '/index',
+            name: '/index',
+            aaa: 111,
             meta: {
                 title: '首页',
                 keywords: '拖拉式建站',
@@ -16,7 +18,8 @@ const routes = [
         return [
             {
                 ...index,
-                path: '/'
+                path: '/',
+                name: '/',
             },
             {
                 ...index,
@@ -26,6 +29,8 @@ const routes = [
 
     {
         path: '/login',
+        name: '/login',
+        aaa: 2222,
         meta: {
             title: '登录',
             keywords: '登录关键词',
