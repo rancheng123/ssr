@@ -2,6 +2,12 @@ import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
 
 const routes = [
     {
+        path: '/',
+        component: () => import(
+            '../pages/index.vue'
+            )
+    },
+    {
         path: '/login',
         component: () => import(
             '../pages/login.vue'
