@@ -16,7 +16,7 @@ const nodes = await new Promise((resolve)=>{
 
       return arr
     })())
-  },3000)
+  },100)
 })
 
 </script>

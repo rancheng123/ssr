@@ -19,7 +19,7 @@ const personDetail = await new Promise((resolve)=>{
     resolve({
       name: 'rancheng'
     })
-  },3000)
+  },100)
 })
 
 
