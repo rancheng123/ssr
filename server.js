@@ -53,6 +53,7 @@ app.use('*', async (req, res) => {
       render = (await import('./dist/server/entry-server.js')).render
     }
 
+    console.log('ssrManifest', ssrManifest)
     const rendered = await render(url, ssrManifest)
 
     const html = template
